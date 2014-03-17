@@ -143,4 +143,12 @@ public class Team {
 		this.goalsAgainst = goalsAgainst;
 	}
 
+	@Override
+	public String toString() {
+		return "Team [team=" + team + ", gamesPlayed=" + gamesPlayed
+				+ ", gamesWon=" + gamesWon + ", gamesEqual=" + gamesEqual
+				+ ", gamesLost=" + gamesLost + ", goalsFor=" + goalsFor
+				+ ", goalsAgainst=" + goalsAgainst + "]";
+	}
+
 }

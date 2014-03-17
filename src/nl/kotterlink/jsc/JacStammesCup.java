@@ -37,6 +37,5 @@ public class JacStammesCup {
 			System.out.println(team);
 		}
 
-		
 	}
 }
