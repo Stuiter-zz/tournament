@@ -33,4 +33,22 @@ public class Poule {
 		System.out.println();
 	}
 
+	public int numberOfGames(????) {
+		int numberOfTeams = ????.size();
+		int numberOfGames;
+		switch (numberOfTeams) {
+			case 2:		numberOfGames = 1;
+						break;
+			case 3:		numberOfGames = 3;
+						break;
+			case 4:		numberOfGames = 6;
+						break;
+			case 5:		numberOfGames = 10;
+						break;
+			default:	numberOfGames = 0;
+						break;
+		}
+		return numberOfGames;
+	}
+
 }
