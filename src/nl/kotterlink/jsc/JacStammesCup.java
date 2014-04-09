@@ -3,6 +3,8 @@
  */
 package nl.kotterlink.jsc;
 
+import java.util.Collection;
+
 
 
 /**

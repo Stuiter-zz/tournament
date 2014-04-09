@@ -33,8 +33,8 @@ public class Poule {
 		System.out.println();
 	}
 
-	public int numberOfGames(????) {
-		int numberOfTeams = ????.size();
+	public int numberOfGames(List<Team> poule) {
+		int numberOfTeams = poule.size();
 		int numberOfGames;
 		switch (numberOfTeams) {
 			case 2:		numberOfGames = 1;
