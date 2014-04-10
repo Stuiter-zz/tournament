@@ -20,7 +20,7 @@ public class JacStammesCup {
 		Pool poolPBGD = new Pool("PBGD");
 		Pool poolPCGD = new Pool("PCGD");
 
-		//PBGD stands for Pool A Gemengd D.
+		//PAGD stands for Pool A Gemengd D.
 		poolPAGD.addTeam(new Team("FIQAS Aalsmeer JD"));
 		poolPAGD.addTeam(new Team("Quintus"));
 		poolPAGD.addTeam(new Team("Houten"));
