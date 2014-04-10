@@ -3,6 +3,8 @@
  */
 package nl.kotterlink.jsc;
 
+import java.util.Collection;
+
 
 
 /**
@@ -16,31 +18,38 @@ public class JacStammesCup {
 	 */
 	public static void main(String[] args) {
 
-		Pool poolPAGD = new Pool("PAGD");
-		Pool poolPBGD = new Pool("PBGD");
-		Pool poolPCGD = new Pool("PCGD");
+		Poule poulePAGD = new Poule("PAGD");
+		Poule poulePBGD = new Poule("PBGD");
+		Poule poulePCGD = new Poule("PCGD");
 
-		//PAGD stands for Pool A Gemengd D.
-		poolPAGD.addTeam(new Team("FIQAS Aalsmeer JD"));
-		poolPAGD.addTeam(new Team("Quintus"));
-		poolPAGD.addTeam(new Team("Houten"));
-		poolPAGD.addTeam(new Team("Gemini"));
+		//PBGD stands for poule A Gemengd D.
+		poulePAGD.addTeam(new Team("FIQAS Aalsmeer JD"));
+		poulePAGD.addTeam(new Team("Quintus"));
+		poulePAGD.addTeam(new Team("Houten"));
+		poulePAGD.addTeam(new Team("Gemini"));
 		
-		//PBGD stands for Pool B Gemengd D.
-		poolPBGD.addTeam(new Team("FIQAS Aalsmeer MD"));
-		poolPBGD.addTeam(new Team("E en O"));
-		poolPBGD.addTeam(new Team("Kras Volendam D3"));
-		poolPBGD.addTeam(new Team("Internos"));
+		//PBGD stands for poule B Gemengd D.
+		poulePBGD.addTeam(new Team("FIQAS Aalsmeer MD"));
+		poulePBGD.addTeam(new Team("E en O"));
+		poulePBGD.addTeam(new Team("Kras Volendam D3"));
+		poulePBGD.addTeam(new Team("Internos"));
 
-		//PCGD stands for Pool C Gemengd D.
-		poolPCGD.addTeam(new Team("Handbalschool Brabant"));
-		poolPCGD.addTeam(new Team("Klink-Nijland Kwiek"));
-		poolPCGD.addTeam(new Team("Kras Volendam D1"));
-		poolPCGD.addTeam(new Team("Succes VOC Amsterdam"));
+		//PCGD stands for poule C Gemengd D.
+		poulePCGD.addTeam(new Team("Handbalschool Brabant"));
+		poulePCGD.addTeam(new Team("Klink-Nijland Kwiek"));
+		poulePCGD.addTeam(new Team("Kras Volendam D1"));
+		poulePCGD.addTeam(new Team("Succes VOC Amsterdam"));
 		
-		poolPAGD.printPool();
-		poolPBGD.printPool();
-		poolPCGD.printPool();
+		poulePAGD.printPoule();
+		poulePBGD.printPoule();
+		poulePCGD.printPoule();
+
+		int test = poulePAGD.numberOfGames(poulePAGD);
+		
+		System.out.println(test);
+		
+		
+		
 		
 	}
 }
