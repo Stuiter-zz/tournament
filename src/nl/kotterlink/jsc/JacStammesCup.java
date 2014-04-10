@@ -44,7 +44,7 @@ public class JacStammesCup {
 		poulePBGD.printPoule();
 		poulePCGD.printPoule();
 
-		int test = poulePAGD.numberOfGames(poulePAGD);
+		int test = poulePAGD.numberOfGames();
 		
 		System.out.println(test);
 		
