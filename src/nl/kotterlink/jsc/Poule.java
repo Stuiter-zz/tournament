@@ -8,14 +8,6 @@ public class Poule {
 	private String pouleName;
 	private List<Team> poule = new ArrayList<Team>();
 
-	public List<Team> getPoule() {
-		return poule;
-	}
-
-	public void setPoule(List<Team> poule) {
-		this.poule = poule;
-	}
-
 	public Poule(String pouleName) {
 		this.pouleName = pouleName;
 	}
