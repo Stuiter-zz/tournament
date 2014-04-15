@@ -3,10 +3,6 @@
  */
 package nl.kotterlink.jsc;
 
-import java.util.Collection;
-
-
-
 /**
  * @author tim
  *
@@ -26,7 +22,7 @@ public class JacStammesCup {
 		poulePAGD.addTeam(new Team("FIQAS Aalsmeer JD"));
 		poulePAGD.addTeam(new Team("Quintus"));
 		poulePAGD.addTeam(new Team("Houten"));
-		poulePAGD.addTeam(new Team("Gemini"));
+//		poulePAGD.addTeam(new Team("Gemini"));
 		
 		//PBGD stands for poule B Gemengd D.
 		poulePBGD.addTeam(new Team("FIQAS Aalsmeer MD"));
@@ -39,17 +35,15 @@ public class JacStammesCup {
 		poulePCGD.addTeam(new Team("Klink-Nijland Kwiek"));
 		poulePCGD.addTeam(new Team("Kras Volendam D1"));
 		poulePCGD.addTeam(new Team("Succes VOC Amsterdam"));
+		poulePCGD.addTeam(new Team("BlaDieBla"));
 		
 		poulePAGD.printPoule();
 		poulePBGD.printPoule();
 		poulePCGD.printPoule();
 
-		int test = poulePAGD.numberOfGames();
-		
-		System.out.println(test);
-		
-		
-		
-		
+		poulePAGD.numberOfGames();
+		poulePBGD.numberOfGames();
+		poulePCGD.numberOfGames();
+
 	}
 }
