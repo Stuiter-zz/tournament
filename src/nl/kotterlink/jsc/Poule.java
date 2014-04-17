@@ -35,39 +35,40 @@ public class Poule {
 
 	public void numberOfGames() {
 		int numberOfTeams = poule.size();
-		List<String> games = new ArrayList<String>();
+		List<Game> games = new ArrayList<Game>();
 		switch (numberOfTeams) {
 		// total number of games is 1
 		case 2:
-			games.add(poule.get(0).getTeam() + " - " + poule.get(1).getTeam());
+			games.add(new Game(poule.get(0), poule.get(1)));
+
 			break;
 		// total number of games is 3
 		case 3:
-			games.add(poule.get(0).getTeam() + " - " + poule.get(1).getTeam());
-			games.add(poule.get(0).getTeam() + " - " + poule.get(2).getTeam());
-			games.add(poule.get(1).getTeam() + " - " + poule.get(2).getTeam());
+			games.add(new Game(poule.get(0), poule.get(1)));
+			games.add(new Game(poule.get(0), poule.get(2)));
+			games.add(new Game(poule.get(1), poule.get(2)));
 			break;
 		// total number of games is 6
 		case 4:
-			games.add(poule.get(0).getTeam() + " - " + poule.get(1).getTeam());
-			games.add(poule.get(0).getTeam() + " - " + poule.get(2).getTeam());
-			games.add(poule.get(0).getTeam() + " - " + poule.get(3).getTeam());
-			games.add(poule.get(1).getTeam() + " - " + poule.get(2).getTeam());
-			games.add(poule.get(1).getTeam() + " - " + poule.get(3).getTeam());
-			games.add(poule.get(2).getTeam() + " - " + poule.get(3).getTeam());
+			games.add(new Game(poule.get(0), poule.get(1)));
+			games.add(new Game(poule.get(0), poule.get(2)));
+			games.add(new Game(poule.get(0), poule.get(3)));
+			games.add(new Game(poule.get(1), poule.get(2)));
+			games.add(new Game(poule.get(1), poule.get(3)));
+			games.add(new Game(poule.get(2), poule.get(3)));
 			break;
 		// total number of games is 10
 		case 5:
-			games.add(poule.get(0).getTeam() + " - " + poule.get(1).getTeam());
-			games.add(poule.get(0).getTeam() + " - " + poule.get(2).getTeam());
-			games.add(poule.get(0).getTeam() + " - " + poule.get(3).getTeam());
-			games.add(poule.get(0).getTeam() + " - " + poule.get(4).getTeam());
-			games.add(poule.get(1).getTeam() + " - " + poule.get(2).getTeam());
-			games.add(poule.get(1).getTeam() + " - " + poule.get(3).getTeam());
-			games.add(poule.get(1).getTeam() + " - " + poule.get(4).getTeam());
-			games.add(poule.get(2).getTeam() + " - " + poule.get(3).getTeam());
-			games.add(poule.get(2).getTeam() + " - " + poule.get(4).getTeam());
-			games.add(poule.get(3).getTeam() + " - " + poule.get(4).getTeam());
+			games.add(new Game(poule.get(0), poule.get(1)));
+			games.add(new Game(poule.get(0), poule.get(2)));
+			games.add(new Game(poule.get(0), poule.get(3)));
+			games.add(new Game(poule.get(0), poule.get(4)));
+			games.add(new Game(poule.get(1), poule.get(2)));
+			games.add(new Game(poule.get(1), poule.get(3)));
+			games.add(new Game(poule.get(1), poule.get(4)));
+			games.add(new Game(poule.get(2), poule.get(3)));
+			games.add(new Game(poule.get(2), poule.get(4)));
+			games.add(new Game(poule.get(3), poule.get(4)));
 			break;
 		// total number of games is 0
 		default:
@@ -78,7 +79,7 @@ public class Poule {
 		System.out
 				.println("------------------------------------------------------------------------");
 		for (int i = 0; i < games.size(); i++) {
-			System.out.println(games.get(i) + i);
+			games.get(i).printGame();
 		}
 		System.out.println();
 
