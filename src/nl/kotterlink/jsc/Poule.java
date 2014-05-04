@@ -36,45 +36,15 @@ public class Poule {
 	public void numberOfGames() {
 		int numberOfTeams = poule.size();
 		List<Game> games = new ArrayList<Game>();
-		switch (numberOfTeams) {
-		// total number of games is 1
-		case 2:
-			games.add(new Game(poule.get(0), poule.get(1)));
 
-			break;
-		// total number of games is 3
-		case 3:
-			games.add(new Game(poule.get(0), poule.get(1)));
-			games.add(new Game(poule.get(0), poule.get(2)));
-			games.add(new Game(poule.get(1), poule.get(2)));
-			break;
-		// total number of games is 6
-		case 4:
-			games.add(new Game(poule.get(0), poule.get(1)));
-			games.add(new Game(poule.get(0), poule.get(2)));
-			games.add(new Game(poule.get(0), poule.get(3)));
-			games.add(new Game(poule.get(1), poule.get(2)));
-			games.add(new Game(poule.get(1), poule.get(3)));
-			games.add(new Game(poule.get(2), poule.get(3)));
-			break;
-		// total number of games is 10
-		case 5:
-			games.add(new Game(poule.get(0), poule.get(1)));
-			games.add(new Game(poule.get(0), poule.get(2)));
-			games.add(new Game(poule.get(0), poule.get(3)));
-			games.add(new Game(poule.get(0), poule.get(4)));
-			games.add(new Game(poule.get(1), poule.get(2)));
-			games.add(new Game(poule.get(1), poule.get(3)));
-			games.add(new Game(poule.get(1), poule.get(4)));
-			games.add(new Game(poule.get(2), poule.get(3)));
-			games.add(new Game(poule.get(2), poule.get(4)));
-			games.add(new Game(poule.get(3), poule.get(4)));
-			break;
-		// total number of games is 0
-		default:
-			break;
+		for (int i = 0; i < numberOfTeams - 1; i++) {
+			for (int j = 1; j < numberOfTeams; j++) {
+				if (i != j && i < j) {
+					games.add(new Game(poule.get(i), poule.get(j)));
+				}
+			}
 		}
-
+		
 		System.out.println("This is poule: " + Poule.this.getPouleName());
 		System.out
 				.println("------------------------------------------------------------------------");
