@@ -36,6 +36,13 @@ public class Poule {
 
 	public void numberOfGames() {
 		List<Game> games = new ArrayList<Game>();
+
+		for (int i = 0; i < numberOfTeams - 1; i++) {
+			for (int j = 1; j < numberOfTeams; j++) {
+				if (i != j && i < j) {
+					games.add(new Game(poule.get(i), poule.get(j)));
+				}
+			}
 		
 		for (int i = 0; i < poule.size(); i++) {
 			for (int j = i+1; j < poule.size(); j++) {
