@@ -37,21 +37,25 @@ public class Poule {
 	public void numberOfGames() {
 		List<Game> games = new ArrayList<Game>();
 
+		int numberOfTeams = poule.size();
 		for (int i = 0; i < numberOfTeams - 1; i++) {
 			for (int j = 1; j < numberOfTeams; j++) {
 				if (i != j && i < j) {
 					games.add(new Game(poule.get(i), poule.get(j)));
+					System.out.println(i + " + " + (j));
 				}
-			}
-		
-		for (int i = 0; i < poule.size(); i++) {
-			for (int j = i+1; j < poule.size(); j++) {
-//				System.out.println(i + " + " + (j));
-				games.add(new Game(poule.get(i), poule.get(j)));
 			}
 		}
 		
-		System.out.println("This is poule: " + Poule.this.getPouleName());
+		System.out.println("------");
+		for (int i = 0; i < poule.size(); i++) {
+			for (int j = i+1; j < poule.size(); j++) {
+				System.out.println(i + " + " + (j));
+//				games.add(new Game(poule.get(i), poule.get(j)));
+			}
+		}
+		
+		System.out.println("\nThis is poule: " + Poule.this.getPouleName());
 		System.out
 				.println("------------------------------------------------------------------------");
 		for (int i = 0; i < games.size(); i++) {
