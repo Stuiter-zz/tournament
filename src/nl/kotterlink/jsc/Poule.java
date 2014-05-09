@@ -42,7 +42,7 @@ public class Poule {
 			for (int j = 1; j < numberOfTeams; j++) {
 				if (i != j && i < j) {
 					games.add(new Game(poule.get(i), poule.get(j)));
-					System.out.println(i + " + " + (j));
+					System.out.println(i + " + " + j);
 				}
 			}
 		}
@@ -50,7 +50,7 @@ public class Poule {
 		System.out.println("------");
 		for (int i = 0; i < poule.size(); i++) {
 			for (int j = i+1; j < poule.size(); j++) {
-				System.out.println(i + " + " + (j));
+				System.out.println(i + " + " + j);
 //				games.add(new Game(poule.get(i), poule.get(j)));
 			}
 		}
